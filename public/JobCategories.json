@@ -1,0 +1,28 @@
+{
+  "jobCategories": [
+    {
+      "id": 1,
+      "name": "Software Developer",
+      "logo": "https://example.com/software_dev_logo.png",
+      "availableJobs": "334"
+    },
+    {
+      "id": 2,
+      "name": "Data Analyst",
+      "logo": "https://example.com/data_analyst_logo.png",
+      "availableJobs": "436"
+    },
+    {
+      "id": 3,
+      "name": "Marketing Specialist",
+      "logo": "https://example.com/marketing_specialist_logo.png",
+      "availableJobs": "275"
+    },
+    {
+      "id": 4,
+      "name": "Customer Support Representative",
+      "logo": "https://example.com/customer_support_logo.png",
+      "availableJobs": "485"
+    }
+  ]
+}
