@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div className='nav relative px-4'>
             <nav className=' container mx-auto flex justify-between items-center py-8'>
-                <Link to="/" className='text-black font-extrabold font-sans text-4xl '>Job Portal</Link>
+                <Link to="/" className='text-black font-bold font-sans text-6xl '>Job Portal</Link>
                 <div className='md:hidden' onClick={() => setOpen(!open)}> 
                     {
                         open === true ? <XMarkIcon className="h-8 w-8 text-blue-500" /> :
@@ -17,7 +17,7 @@ const Header = () => {
                     }
                 </div>
                 <div className={`md:flex flex-col md:flex-row  gap-6 font-bold text-neutral-500 absolute md:static duration-500 
-                ${open ? 'top-20' : '-top-96'}`}>
+                ${open ? 'top-20 bg-slate-500 text-white p-4 rounded-lg' : '-top-96'}`}>
                         <div>
                              <Link to="/statistics">Statistics</Link>
                         </div> 
@@ -29,7 +29,7 @@ const Header = () => {
                         </div>
                     </div>
                 <button className={`py-2 px-3 bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white 
-                font-bold text-lg rounded-lg absolute md:static duration-500 ${open ? 'top-40' : '-top-96'}`}>Start Applying</button>
+                font-bold text-lg rounded-lg absolute md:static duration-500 ${open ? 'top-44' : '-top-96'}`}>Start Applying</button>
             </nav>
         </div>
     );
