@@ -2,26 +2,26 @@
   "jobCategories": [
     {
       "id": 1,
-      "name": "Software Developer",
-      "logo": "https://example.com/software_dev_logo.png",
+      "name": "Creative Design",
+      "logo": "../src/assets/Icons/business-1.png",
       "availableJobs": "334"
     },
     {
       "id": 2,
-      "name": "Data Analyst",
-      "logo": "https://example.com/data_analyst_logo.png",
+      "name": "Engineering Job",
+      "logo": "../src/assets/Icons/chip-1.png",
       "availableJobs": "436"
     },
     {
       "id": 3,
-      "name": "Marketing Specialist",
-      "logo": "https://example.com/marketing_specialist_logo.png",
+      "name": "Account & Finance",
+      "logo": "../src/assets/Icons/accounts-1.png",
       "availableJobs": "275"
     },
     {
       "id": 4,
-      "name": "Customer Support Representative",
-      "logo": "https://example.com/customer_support_logo.png",
+      "name": "Marketing & Sales",
+      "logo": "../src/assets/Icons/social-media-1.png",
       "availableJobs": "485"
     }
   ]
