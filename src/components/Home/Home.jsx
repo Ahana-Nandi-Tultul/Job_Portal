@@ -7,6 +7,7 @@ import FeaturedJob from '../FeaturedJob/FeaturedJob';
 const Home = () => {
     const [categories, setCategory] = useState([]);
     const [jobs, setJobs] = useState([]);
+    const [jobsNumber, setJobsNumber] = useState(4);
     useEffect(() => {
         fetch('JobCategories.json')
         .then(res => res.json())
@@ -16,9 +17,9 @@ const Home = () => {
     const data = useLoaderData();
     const {jobListings} = data;
     useEffect(() =>{
-        const loadedData = jobListings.slice(0, 4);
+        const loadedData = jobListings.slice(0, jobsNumber);
         setJobs(loadedData);
-    }, [])
+    }, [jobsNumber])
 
     return (
         <div>
@@ -52,6 +53,10 @@ const Home = () => {
                         job = {job}
                         key ={job.id}></FeaturedJob>)
                     }
+                </div>
+                <div className={` justify-center mt-8 ${jobs.length === jobListings.length? 'hidden' : 'flex'}`}>
+                    <button onClick={() => setJobsNumber(jobListings.length)} className='mx-auto py-2 px-3 bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white 
+                        font-semibold text-lg rounded-lg'>See All Jobs</button>
                 </div>
             </div>
         </div>

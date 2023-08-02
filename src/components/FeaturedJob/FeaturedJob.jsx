@@ -7,7 +7,7 @@ const FeaturedJob = ({job}) => {
     console.log(job);
     return (
         <div className='border border-slate-300 p-10 rounded-lg'>
-            <img className='mb-6' src={companyLogo} alt="" />
+            <img className='mb-6' style={{height: "40px"}} src={companyLogo} alt="" />
             <h2 className='text-2xl font-bold mb-4'>{jobTitle}</h2>
             <h4 className='text-slate-500 text-xl font-semibold mb-4'>{companyName}</h4>
             <p className='bg-gradient-to-r from-[#7E90FE] to-[#9873FF] bg-clip-text text-transparent mb-4'>
