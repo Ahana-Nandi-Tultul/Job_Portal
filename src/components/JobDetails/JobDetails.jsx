@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { JobsListsContext } from '../Layout/Main/Main';
 import Banner2nd from '../Banner2nd/Banner2nd';
@@ -9,9 +9,12 @@ import {
     faPhone, 
     faEnvelope,
     faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { addItemToLocalStorage } from '../Utilities/fakeDb';
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const JobDetails = () => {
+    const [appliedJobs, setAppliedJobs] = useState([]);
     const jobId = useLoaderData();
     console.log(jobId);
     const [jobsList, setjobsList] = useContext(JobsListsContext);
@@ -23,9 +26,25 @@ const JobDetails = () => {
         experiences, salary, jobTitle, 
         contactInformation, location} = jobDetails;
     const {phone, email} = contactInformation;
+
+    const notify = () => toast('You have already applied in this post.');
+
+    const handleAppliedJobs = (jobDetails) => {
+        let exists = appliedJobs.find(job => job.id === jobDetails.id);
+        if(exists){
+            notify()
+        }
+        else{
+
+            let newAppliedJobs = [...appliedJobs, jobDetails];
+            setAppliedJobs(newAppliedJobs);
+            addItemToLocalStorage(jobDetails.id);
+        }
+    }
+
     return (
         <div>
-            <Banner2nd><h4 className="text-3xl font-bold">Applied Jobs</h4></Banner2nd>
+            <Banner2nd key={id}><h4 className="text-3xl font-bold">Job Details</h4></Banner2nd>
             <div className='grid grid-cols-3 container px-4 gap-6 my-24 md:mx-12'>
                 <div className='col-span-2'>
                     <p className='mb-6'><strong>Job Description: </strong><span className='text-slate-500'>{jobDescription}</span></p>
@@ -63,7 +82,7 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <button className='w-full py-4 bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white 
+                        <button onClick={() => handleAppliedJobs(jobDetails)} className='w-full py-4 bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white 
                             font-bold text-lg rounded-lg'>Apply Now</button>
                     </div>
                 </div>
