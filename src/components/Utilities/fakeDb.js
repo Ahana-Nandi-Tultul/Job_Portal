@@ -1,0 +1,5 @@
+const addItemToLocalStorage = () => {
+    
+}
+
+export {addItemToLocalStorage}
