@@ -13,12 +13,14 @@ import Blog from './components/Blog/Blog.jsx';
 import Home from './components/Home/Home.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
 import loadStoredJobs from './components/Loader/loadStoredJobs.js';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element:<Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -45,6 +47,7 @@ const router = createBrowserRouter([
       }
     ]
   }
+  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
