@@ -3,7 +3,6 @@ import Banner from '../Banner/Banner';
 import JobCategory from '../JobCategory/JobCategory';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJob from '../FeaturedJob/FeaturedJob';
-import { JobsListsContext } from '../Layout/Main/Main';
 
 
 const Home = () => {
@@ -23,12 +22,6 @@ const Home = () => {
         const loadedData = jobListings.slice(0, jobsNumber);
         setJobs(loadedData);
     }, [jobsNumber]);
-
-    const [jobsList, setjobsList] = useContext(JobsListsContext);
-    useEffect(()=>{
-        setjobsList(jobListings);
-    }, [jobListings])
-    // setjobsList([...jobListings]);
 
     return (
         <div>

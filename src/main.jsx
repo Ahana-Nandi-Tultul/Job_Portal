@@ -12,7 +12,8 @@ import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import Home from './components/Home/Home.jsx';
 import JobDetails from './components/JobDetails/JobDetails.jsx';
-import getJobId from './components/Utilities/JobDetails.js';
+import loadStoredJobs from './components/Loader/loadStoredJobs.js';
+
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: 'job/:id',
         element: <JobDetails></JobDetails>,
-        loader: ({params}) => getJobId(params.id)
+        loader: ({params}) => loadStoredJobs(params.id)
       },
       {
         path: 'statistics',
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'applied-jobs',
-        element: <AppliedJobs></AppliedJobs>
+        element: <AppliedJobs></AppliedJobs>,
+        loader: loadStoredJobs
       },
       {
         path: 'blog',

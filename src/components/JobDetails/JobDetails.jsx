@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { JobsListsContext } from '../Layout/Main/Main';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Banner2nd from '../Banner2nd/Banner2nd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -14,13 +13,13 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 const JobDetails = () => {
-    const [appliedJobs, setAppliedJobs] = useState([]);
-    const jobId = useLoaderData();
-    console.log(jobId);
-    const [jobsList, setjobsList] = useContext(JobsListsContext);
-    console.log(jobsList);
-
-    const jobDetails = jobsList.find(job => job.id == jobId);
+    const {jobId, storedAppliedJobs, loadedJobs} = useLoaderData();
+    const navigate = useNavigate();
+    
+    const [jobs, setJobs] = useState(storedAppliedJobs);
+    
+    const jobDetails = loadedJobs.find(job => job.id == jobId);
+    console.log(jobs, jobId, jobDetails)
     const {id, jobDescription, 
         jobResponsibility, educationalRequirements, 
         experiences, salary, jobTitle, 
@@ -30,15 +29,16 @@ const JobDetails = () => {
     const notify = () => toast('You have already applied in this post.');
 
     const handleAppliedJobs = (jobDetails) => {
-        let exists = appliedJobs.find(job => job.id === jobDetails.id);
+        let exists = jobs.find(job => job.id === jobDetails.id);
         if(exists){
             notify()
         }
         else{
 
-            let newAppliedJobs = [...appliedJobs, jobDetails];
-            setAppliedJobs(newAppliedJobs);
+            let newAppliedJobs = [...jobs, jobDetails];
+            setJobs(newAppliedJobs);
             addItemToLocalStorage(jobDetails.id);
+            navigate('/applied-jobs');
         }
     }
 

@@ -11,6 +11,15 @@ const addItemToLocalStorage = (id) => {
     localStorage.setItem('applied-jobs', JSON.stringify(appliedJobs));
 }
 
+const getItemFromLocalStorage = () =>{
+    const appliedJobs = localStorage.getItem('applied-jobs');
+    if(appliedJobs){
+        const storedJobs = JSON.parse(appliedJobs);
+        return storedJobs;
+    }
+}
+
 export {
-    addItemToLocalStorage
+    addItemToLocalStorage,
+    getItemFromLocalStorage
 }
