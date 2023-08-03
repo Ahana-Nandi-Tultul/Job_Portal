@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDollarSign } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from 'react-router-dom';
 
+
 const FeaturedJob = ({job, isAppliedJobs}) => {
     const {id, companyLogo, jobTitle, companyName, location, salary, fulltimeOrPartTime, remoteOrOnsite} = job;
     // console.log(job);

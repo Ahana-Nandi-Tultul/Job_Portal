@@ -2,7 +2,7 @@
     "jobListings": [
         {
             "id": 1,
-            "companyLogo": "../src/assets/AllImages/google-1-1-1.png",
+            "companyLogo": "./AllImages/google-1-1-1.png",
             "jobTitle": "Software Engineer",
             "companyName": "Google",
             "remoteOrOnsite": "Remote",
@@ -20,7 +20,7 @@
         },
         {
             "id": 2,
-            "companyLogo": "../src/assets/AllImages/netflix-4-1.png",
+            "companyLogo": "./AllImages/netflix-4-1.png",
             "jobTitle": "Data Analyst",
             "companyName": "Netflix",
             "remoteOrOnsite": "Onsite",
@@ -38,7 +38,7 @@
         },
         {
             "id": 3,
-            "companyLogo": "../src/assets/AllImages/Group-10021.png",
+            "companyLogo": "./AllImages/Group-10021.png",
             "jobTitle": "Data Scientist",
             "companyName": "Airbnb",
             "remoteOrOnsite": "Remote",
@@ -56,7 +56,7 @@
         },
         {
             "id": 4,
-            "companyLogo": "../src/assets/AllImages/CrDS.png",
+            "companyLogo": "./AllImages/CrDS.png",
             "jobTitle": "Graphic Designer",
             "companyName": "Creative Designs Studio",
             "remoteOrOnsite": "Onsite",
@@ -74,7 +74,7 @@
         },
         {
             "id": 5,
-            "companyLogo": "../src/assets/AllImages/tesla-9-1.png",
+            "companyLogo": "./AllImages/tesla-9-1.png",
             "jobTitle": "Sales Representative",
             "companyName": "Tesla",
             "remoteOrOnsite": "Remote",
@@ -92,7 +92,7 @@
         },
         {
             "id": 6,
-            "companyLogo": "../src/assets/AllImages/DigitalInvo.png",
+            "companyLogo": "./AllImages/DigitalInvo.png",
             "jobTitle": "UX/UI Designer",
             "companyName": "Digital Innovations Ltd.",
             "remoteOrOnsite": "Onsite",
@@ -110,7 +110,7 @@
         },
         {
             "id": 7,
-            "companyLogo": "../src/assets/AllImages/financial.png",
+            "companyLogo": "./AllImages/financial.png",
             "jobTitle": "Financial Analyst",
             "companyName": "Financial Insights LLC",
             "remoteOrOnsite": "Remote",
@@ -128,7 +128,7 @@
         },
         {
             "id": 8,
-            "companyLogo": "../src/assets/AllImages/contentSl.png",
+            "companyLogo": "./AllImages/contentSl.png",
             "jobTitle": "Content Writer",
             "companyName": "Creative Content Solutions",
             "remoteOrOnsite": "Remote",
@@ -146,7 +146,7 @@
         },
         {
             "id": 9,
-            "companyLogo": "../src/assets/AllImages/techInc.png",
+            "companyLogo": "./AllImages/techInc.png",
             "jobTitle": "Software Engineer",
             "companyName": "Tech Innovations Inc.",
             "remoteOrOnsite": "Remote",
@@ -164,7 +164,7 @@
         },
         {
             "id": 10,
-            "companyLogo": "../src/assets/AllImages/growthCo.png",
+            "companyLogo": "./AllImages/growthCo.png",
             "jobTitle": "Marketing Manager",
             "companyName": "Growth Strategies Co.",
             "remoteOrOnsite": "Remote",

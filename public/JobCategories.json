@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "Creative Design",
-      "logo": "../src/assets/Icons/business-1.png",
+      "logo": "./Icons/business-1.png",
       "availableJobs": "334"
     },
     {
       "id": 2,
       "name": "Engineering Job",
-      "logo": "../src/assets/Icons/chip-1.png",
+      "logo": "./Icons/chip-1.png",
       "availableJobs": "436"
     },
     {
       "id": 3,
       "name": "Account & Finance",
-      "logo": "../src/assets/Icons/accounts-1.png",
+      "logo": "./Icons/accounts-1.png",
       "availableJobs": "275"
     },
     {
       "id": 4,
       "name": "Marketing & Sales",
-      "logo": "../src/assets/Icons/social-media-1.png",
+      "logo": "./Icons/social-media-1.png",
       "availableJobs": "485"
     }
   ]
