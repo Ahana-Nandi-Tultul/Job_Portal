@@ -12,11 +12,11 @@ const FeaturedJob = ({job, isAppliedJobs}) => {
     }
     return (
         <div>
-            <div className={`border border-slate-300 p-10 rounded-lg ${isAppliedJobs ? 'grid grid-cols-3 gap-5 mb-6' : 'grid'}`}>
+            <div className={`border border-slate-300 p-10 rounded-lg ${isAppliedJobs ? 'grid md:grid-cols-3 gap-5 mb-6' : 'grid'}`}>
                 <div className={`${isAppliedJobs ? 'nav flex justify-center items-center px-10 rounded-lg' : ''}`}>
                     <img className='mb-6' style={{height: "40px"}} src={companyLogo} alt="" />
                 </div>
-                <div className={`${isAppliedJobs ? 'col-span-2 flex items-center' : 'grid'}`}>
+                <div className={`${isAppliedJobs ? 'col-span-2 md:flex items-center' : 'grid'}`}>
                     <div className={`${isAppliedJobs ? 'flex-grow': ''}`}>
                         <h2 className='text-2xl font-bold mb-4'>{jobTitle}</h2>
                         <h4 className='text-slate-500 text-xl font-semibold mb-4'>{companyName}</h4>

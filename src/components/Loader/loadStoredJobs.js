@@ -4,7 +4,7 @@ const loadStoredJobs = async(jobId = null) => {
     const loadedJobsJson = await fetch('http://127.0.0.1:5173/data.json');
     const loadedJobsList = await loadedJobsJson.json();
     const loadedJobs = loadedJobsList.jobListings;
-    console.log(loadedJobs);
+    // console.log(loadedJobs);
 
     const storedJobs = getItemFromLocalStorage();
     let storedAppliedJobs = [];
@@ -14,7 +14,7 @@ const loadStoredJobs = async(jobId = null) => {
             storedAppliedJobs.push(addedJobs);
         }
     }
-    console.log(storedAppliedJobs);
+    // console.log(storedAppliedJobs);
     return {storedAppliedJobs , jobId, loadedJobs};
 }
 

@@ -19,7 +19,7 @@ const JobDetails = () => {
     const [jobs, setJobs] = useState(storedAppliedJobs);
     
     const jobDetails = loadedJobs.find(job => job.id == jobId);
-    console.log(jobs, jobId, jobDetails)
+    // console.log(jobs, jobId, jobDetails)
     const {id, jobDescription, 
         jobResponsibility, educationalRequirements, 
         experiences, salary, jobTitle, 
