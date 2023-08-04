@@ -1,7 +1,7 @@
 import { getItemFromLocalStorage } from "../Utilities/fakeDb";
 
 const loadStoredJobs = async(jobId = null) => {
-    const loadedJobsJson = await fetch('http://127.0.0.1:5173/data.json');
+    const loadedJobsJson = await fetch('../data.json');
     const loadedJobsList = await loadedJobsJson.json();
     const loadedJobs = loadedJobsList.jobListings;
     // console.log(loadedJobs);

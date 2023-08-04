@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader : () => fetch('http://127.0.0.1:5173/data.json')
+        loader : () => fetch('data.json')
       },
       {
         path: 'job/:id',

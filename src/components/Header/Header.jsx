@@ -7,13 +7,13 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     const navigate = useNavigate();
     const handleStartApply = () => {
-        navigate('/');
+        navigate(-1);
     }
 
     return (
         <div className='nav relative px-4'>
             <nav className=' container mx-auto flex justify-between items-center py-8'>
-                <Link to="/" className='text-black font-bold font-sans text-6xl '>Jobs Portal</Link>
+                <h2 className='text-black font-bold font-sans text-6xl '>Jobs Portal</h2>
                 <div className='md:hidden' onClick={() => setOpen(!open)}> 
                     {
                         open === true ? <XMarkIcon className="h-8 w-8 text-blue-500" /> :
