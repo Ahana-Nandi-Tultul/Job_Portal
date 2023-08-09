@@ -45,8 +45,8 @@ const JobDetails = () => {
     return (
         <div>
             <Banner2nd key={id}><h4 className="text-3xl font-bold">Job Details</h4></Banner2nd>
-            <div className='grid grid-cols-3 container px-4 gap-6 my-24 md:mx-12'>
-                <div className='col-span-2'>
+            <div className='grid grid-cols-1 md:grid-cols-3 container px-4 gap-6 my-24 md:mx-12'>
+                <div className='md:col-span-2'>
                     <p className='mb-6'><strong>Job Description: </strong><span className='text-slate-500'>{jobDescription}</span></p>
                     <p className='mb-6'><strong>Job Responsibility: </strong><span className='text-slate-500'>{jobResponsibility}</span></p>
                     <p className='mb-2'><strong>Educational Requirements: </strong></p>
@@ -55,7 +55,7 @@ const JobDetails = () => {
                     <p className='mb-6 text-slate-500'>{experiences}</p>
                 </div>
                 <div>
-                    <div className='nav p-8 rounded-lg mb-6'>
+                    <div className='nav  md:p-8 p-4 rounded-lg mb-6'>
                         <div>
                             <h2 className='font-bold text-xl mb-4'>Job Details</h2>
                             <hr className='mb-4' />

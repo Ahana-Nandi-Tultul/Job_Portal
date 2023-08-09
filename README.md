@@ -1,6 +1,6 @@
 # Jobs Portal
 
-# Live Link : https://dapper-buttercream-d207ff.netlify.app/
+# Live Link : https://64d38f8556c1676418a575e3--dapper-buttercream-d207ff.netlify.app/
 ## Description
 Welcome to my Project. This is a Jobs Portal App made in React. It helps user to find their suitable. User can apply
 different job post through this app.
